@@ -2,34 +2,31 @@ using Unity.Mathematics;
 using UnityEngine;
 using UnityEngine.Splines;
 
-namespace software.anthill
+public class PathRenderer : MonoBehaviour
 {
-    public class PathRenderer : MonoBehaviour
+    private SplineContainer _splineContainer;
+
+    private Vector3[] _points;
+
+    private void Start()
     {
-        private SplineContainer _splineContainer;
+        _splineContainer = GetComponent<SplineContainer>();
+    }
 
-        private Vector3[] _points;
 
-        private void Start()
+    public void UpdatePath(Vector3[] points)
+    {
+        _points = points;
+    }
+
+    private void Update()
+    {
+        _splineContainer.Spline.Clear();
+        if (_points != null)
         {
-            _splineContainer = GetComponent<SplineContainer>();
-        }
-
-
-        public void UpdatePath(Vector3[] points)
-        {
-            _points = points;
-        }
-
-        private void Update()
-        {
-            _splineContainer.Spline.Clear();
-            if (_points != null)
+            foreach (var corner in _points)
             {
-                foreach (var corner in _points)
-                {
-                    _splineContainer.Spline.Add(new float3(corner.x, corner.y, corner.z));
-                }
+                _splineContainer.Spline.Add(new float3(corner.x, corner.y, corner.z));
             }
         }
     }

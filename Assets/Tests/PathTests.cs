@@ -1,6 +1,5 @@
 using System.Collections.Generic;
 using NUnit.Framework;
-using software.anthill;
 using UnityEngine;
 
 namespace Tests

@@ -3,6 +3,7 @@
 Library to limit the length of a `NavMeshPath` created by `NavMeshAgent` or any valid path represented by an array of Unity `Vector3` coordinates.
 
 ## Demo
+
 Checkout the repository and import the project into Unity to play with below demo
 ![NavMeshPath Limiting Demo](READMEAssets/demo.gif)
 
@@ -15,7 +16,6 @@ NavMeshPathExtension adds 3 helper methods to NavMeshPath: `Length`, `Limit` and
 ```csharp
 using UnityEngine;
 using UnityEngine.AI;
-using software.anthill;
 public class Demo : MonoBehaviour
 {
     private void Start()
@@ -50,7 +50,6 @@ If it is more convenient for you you can use [`Path.cs`](Assets/Scripts/Path.cs)
 ```csharp
 using UnityEngine;
 using UnityEngine.AI;
-using software.anthill;
 public class Demo : MonoBehaviour
 {
     private void Start()
