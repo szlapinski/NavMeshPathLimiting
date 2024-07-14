@@ -46,7 +46,7 @@ public class Demo : MonoBehaviour
 ```
 
 ### Path static class
-If it is more convenient for you you can use `Path` class static methods directly
+If it is more convenient for you you can use [`Path.cs`](Assets/Scripts/Path.cs) class static methods directly
 ```csharp
 using UnityEngine;
 using UnityEngine.AI;
@@ -79,3 +79,6 @@ public class Demo : MonoBehaviour
     }
 }
 ```
+## License
+
+The code in this project is licensed under the MIT License. See [LICENSE](LICENSE) for details.
